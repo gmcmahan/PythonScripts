@@ -50,9 +50,12 @@ def dostuff(fdir):
 
 
 def main():
+    root = tk.Tk()
+    root.withdraw()
     initialdir = os.path.dirname(os.path.realpath(__file__))
     #initialdir = os.path.dirname(os.path.dirname(initialdir))
     fdir = tk.askdirectory(initialdir=[(initialdir)])
+    root.destroy()
     # fpath = tkFileDialog.askopenfilename(filetypes=[('csv files', '.csv'),('text files', '.txt')],
     #                                     initialdir=[('')])
     if fdir == '':
